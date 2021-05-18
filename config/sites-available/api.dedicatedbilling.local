@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    listen [::]:80;
+    root /var/www/html/v2/api/web/;
+    index index.php;
+    server_name api.dedicatedbilling.local;
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
